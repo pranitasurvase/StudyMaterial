@@ -61,33 +61,109 @@ export default function AdminBulkImport() {
   const convertToBackendFormat = (question) => {
     // Get subject ID from topic with better matching
     const topicText = (question.topic?.en || question.topic || '').toLowerCase();
+    const questionText = (question.question?.en || question.question || '').toLowerCase();
+    
+    // Combine topic and question text for better detection
+    const combinedText = `${topicText} ${questionText}`;
     
     let subjectId = selectedSubject || 2; // Default to selected or Modern History
     
-    // Check for subject keywords in topic
-    if (topicText.includes('ancient')) {
+    // Check for subject keywords in topic AND question text (priority order)
+    // Ancient History - check first
+    if (combinedText.includes('ancient') || 
+        combinedText.includes('maurya') || 
+        combinedText.includes('gupta') || 
+        combinedText.includes('harappa') || 
+        combinedText.includes('indus valley') ||
+        combinedText.includes('vedic') ||
+        combinedText.includes('ashoka') ||
+        combinedText.includes('chandragupta') ||
+        combinedText.includes('buddha') ||
+        combinedText.includes('mahavira') ||
+        combinedText.includes('jainism') ||
+        combinedText.includes('buddhism') ||
+        topicText.includes('प्राचीन')) {
       subjectId = 3; // Ancient History
-    } else if (topicText.includes('medieval') || topicText.includes('mughal') || topicText.includes('sultanate')) {
+    } 
+    // Medieval History
+    else if (combinedText.includes('medieval') || 
+             combinedText.includes('mughal') || 
+             combinedText.includes('sultanate') ||
+             combinedText.includes('akbar') ||
+             combinedText.includes('aurangzeb') ||
+             topicText.includes('मध्ययुगीन')) {
       subjectId = 4; // Medieval History
-    } else if (topicText.includes('modern') || topicText.includes('british') || topicText.includes('freedom') || topicText.includes('gandhi')) {
+    } 
+    // Modern History
+    else if (combinedText.includes('modern') || 
+             combinedText.includes('british') || 
+             combinedText.includes('freedom') || 
+             combinedText.includes('gandhi') ||
+             combinedText.includes('independence') ||
+             combinedText.includes('1857') ||
+             topicText.includes('आधुनिक')) {
       subjectId = 2; // Modern History
-    } else if (topicText.includes('geography') || topicText.includes('physical') || topicText.includes('climate')) {
+    } 
+    // Geography
+    else if (combinedText.includes('geography') || 
+             combinedText.includes('physical') || 
+             combinedText.includes('climate') ||
+             topicText.includes('भूगोल')) {
       subjectId = 5; // Geography
-    } else if (topicText.includes('polity') || topicText.includes('constitution') || topicText.includes('governance')) {
+    } 
+    // Polity
+    else if (combinedText.includes('polity') || 
+             combinedText.includes('constitution') || 
+             combinedText.includes('governance') ||
+             topicText.includes('राज्यशास्त्र')) {
       subjectId = 6; // Polity
-    } else if (topicText.includes('economy') || topicText.includes('economic')) {
+    } 
+    // Economy
+    else if (combinedText.includes('economy') || 
+             combinedText.includes('economic') ||
+             topicText.includes('अर्थशास्त्र')) {
       subjectId = 7; // Economy
-    } else if (topicText.includes('science') || topicText.includes('physics') || topicText.includes('chemistry') || topicText.includes('biology')) {
+    } 
+    // Science
+    else if (combinedText.includes('science') || 
+             combinedText.includes('physics') || 
+             combinedText.includes('chemistry') || 
+             combinedText.includes('biology') ||
+             topicText.includes('विज्ञान')) {
       subjectId = 8; // Science
-    } else if (topicText.includes('environment') || topicText.includes('ecology')) {
+    } 
+    // Environment
+    else if (combinedText.includes('environment') || 
+             combinedText.includes('ecology') ||
+             topicText.includes('पर्यावरण')) {
       subjectId = 9; // Environment
-    } else if (topicText.includes('current affairs') || topicText.includes('national') || topicText.includes('international')) {
+    } 
+    // Current Affairs
+    else if (combinedText.includes('current affairs') || 
+             combinedText.includes('national') || 
+             combinedText.includes('international') ||
+             topicText.includes('चालू घडामोडी')) {
       subjectId = 10; // Current Affairs
-    } else if (topicText.includes('csat') || topicText.includes('aptitude')) {
+    } 
+    // CSAT
+    else if (combinedText.includes('csat') || 
+             combinedText.includes('aptitude') ||
+             topicText.includes('सीसॅट')) {
       subjectId = 11; // CSAT
-    } else if (topicText.includes('history') && !topicText.includes('modern') && !topicText.includes('ancient') && !topicText.includes('medieval')) {
+    } 
+    // General History (fallback)
+    else if (combinedText.includes('history') && 
+             !combinedText.includes('modern') && 
+             !combinedText.includes('ancient') && 
+             !combinedText.includes('medieval')) {
       subjectId = 1; // General History
     }
+    
+    console.log('🔍 Subject Detection:', {
+      topic: topicText.substring(0, 50),
+      question: questionText.substring(0, 50),
+      detectedSubjectId: subjectId
+    });
 
     return {
       subject_id: subjectId,
@@ -215,63 +291,114 @@ export default function AdminBulkImport() {
       console.log(`🚀 Starting import of ${questions.length} questions...`);
 
       const importResults = [];
+      const BATCH_SIZE = 5; // Process 5 questions at a time
 
-      // Import each question
-      for (let i = 0; i < questions.length; i++) {
-        const question = questions[i];
+      // Import in batches
+      for (let batchStart = 0; batchStart < questions.length; batchStart += BATCH_SIZE) {
+        const batchEnd = Math.min(batchStart + BATCH_SIZE, questions.length);
+        const batch = questions.slice(batchStart, batchEnd);
         
-        try {
-          const backendFormat = convertToBackendFormat(question);
+        console.log(`📦 Processing batch ${Math.floor(batchStart / BATCH_SIZE) + 1}/${Math.ceil(questions.length / BATCH_SIZE)}`);
+
+        // Process batch in parallel
+        const batchPromises = batch.map(async (question, batchIndex) => {
+          const i = batchStart + batchIndex;
           
-          console.log(`📤 Importing question ${i + 1}/${questions.length}:`, {
-            question: backendFormat.question.substring(0, 50),
-            subject_id: backendFormat.subject_id
-          });
-
-          const response = await fetch(`${API_URL}/questions`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(backendFormat)
-          });
-
-          if (response.ok) {
-            const saved = await response.json();
-            console.log(`✅ Question ${i + 1} saved with ID:`, saved.id);
-            importResults.push({
-              success: true,
-              question: question.question?.en || question.question || 'Unknown',
-              id: saved.id
+          try {
+            const backendFormat = convertToBackendFormat(question);
+            
+            console.log(`📤 Importing question ${i + 1}/${questions.length}:`, {
+              question: backendFormat.question.substring(0, 50),
+              subject_id: backendFormat.subject_id
             });
-          } else {
-            const error = await response.json();
-            console.error(`❌ Question ${i + 1} failed:`, error);
-            importResults.push({
+
+            const response = await fetch(`${API_URL}/questions`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(backendFormat)
+            });
+
+            if (response.ok) {
+              const saved = await response.json();
+              console.log(`✅ Question ${i + 1} saved with ID:`, saved.id);
+              return {
+                success: true,
+                question: question.question?.en || question.question || 'Unknown',
+                id: saved.id,
+                subject_id: backendFormat.subject_id
+              };
+            } else {
+              const errorText = await response.text();
+              let errorDetail = errorText;
+              let isDuplicate = false;
+              
+              try {
+                const errorJson = JSON.parse(errorText);
+                errorDetail = errorJson.detail || JSON.stringify(errorJson);
+                isDuplicate = response.status === 409; // Conflict = Duplicate
+              } catch (e) {
+                // Keep errorText as is
+              }
+              
+              if (isDuplicate) {
+                console.warn(`⚠️ Question ${i + 1} skipped (duplicate):`, errorDetail);
+              } else {
+                console.error(`❌ Question ${i + 1} failed (${response.status}):`, errorDetail);
+              }
+              
+              return {
+                success: false,
+                question: question.question?.en || question.question || 'Unknown',
+                error: `HTTP ${response.status}: ${errorDetail}`,
+                subject_id: backendFormat.subject_id,
+                isDuplicate: isDuplicate
+              };
+            }
+          } catch (error) {
+            console.error(`❌ Question ${i + 1} error:`, error);
+            return {
               success: false,
               question: question.question?.en || question.question || 'Unknown',
-              error: error.detail || JSON.stringify(error)
-            });
+              error: error.message,
+              subject_id: 'N/A'
+            };
           }
-        } catch (error) {
-          console.error(`❌ Question ${i + 1} error:`, error);
-          importResults.push({
-            success: false,
-            question: question.question?.en || question.question || 'Unknown',
-            error: error.message
-          });
-        }
+        });
 
-        // Small delay to avoid overwhelming the server
-        await new Promise(resolve => setTimeout(resolve, 100));
+        // Wait for batch to complete
+        const batchResults = await Promise.all(batchPromises);
+        importResults.push(...batchResults);
+        
+        // Small delay between batches
+        if (batchEnd < questions.length) {
+          await new Promise(resolve => setTimeout(resolve, 200));
+        }
       }
 
       setResults(importResults);
       
       const successCount = importResults.filter(r => r.success).length;
-      const failCount = questions.length - successCount;
+      const duplicateCount = importResults.filter(r => r.isDuplicate).length;
+      const failCount = questions.length - successCount - duplicateCount;
       
-      console.log(`📊 Import complete: ${successCount} success, ${failCount} failed`);
+      console.log(`📊 Import complete: ${successCount} success, ${duplicateCount} duplicates skipped, ${failCount} failed`);
       
-      alert(`✅ Import Complete!\n\n✓ Success: ${successCount}\n✗ Failed: ${failCount}\n\nTotal: ${questions.length} questions`);
+      // Verify actual database count
+      try {
+        const subjectsRes = await fetch(`${API_URL}/subjects`);
+        if (subjectsRes.ok) {
+          const subjects = await subjectsRes.json();
+          const questionsRes = await fetch(`${API_URL}/questions?limit=10000`);
+          if (questionsRes.ok) {
+            const data = await questionsRes.json();
+            console.log(`🔍 Database verification: ${data.total} total questions in database`);
+          }
+        }
+      } catch (e) {
+        console.log('Could not verify database count');
+      }
+      
+      alert(`✅ Import Complete!\n\n✓ New Questions Added: ${successCount}\n⚠️ Duplicates Skipped: ${duplicateCount}\n✗ Failed: ${failCount}\n\nTotal Attempted: ${questions.length} questions\n\n💡 Check browser console (F12) for detailed logs`);
 
     } catch (error) {
       console.error('❌ Import error:', error);
@@ -323,6 +450,33 @@ export default function AdminBulkImport() {
               📝 Paste JSON Here
             </h2>
             
+            {/* Subject Selector */}
+            <div className="mb-4 p-4 bg-blue-50 rounded-lg">
+              <label className="block text-sm font-semibold text-gray-700 mb-2">
+                📚 Default Subject (if auto-detection fails):
+              </label>
+              <select
+                value={selectedSubject}
+                onChange={(e) => setSelectedSubject(Number(e.target.value))}
+                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+              >
+                <option value={1}>History (General)</option>
+                <option value={2}>Modern History</option>
+                <option value={3}>Ancient History</option>
+                <option value={4}>Medieval History</option>
+                <option value={5}>Geography</option>
+                <option value={6}>Polity</option>
+                <option value={7}>Economy</option>
+                <option value={8}>Science</option>
+                <option value={9}>Environment</option>
+                <option value={10}>Current Affairs</option>
+                <option value={11}>CSAT</option>
+              </select>
+              <p className="text-xs text-gray-600 mt-2">
+                💡 System will try to auto-detect subject from topic/question. This is fallback.
+              </p>
+            </div>
+            
             <textarea
               value={jsonInput}
               onChange={(e) => setJsonInput(e.target.value)}
@@ -363,8 +517,8 @@ export default function AdminBulkImport() {
                 📚 Subject Mapping:
               </h3>
               <div className="text-xs text-gray-600 space-y-1">
-                {Object.entries(subjectMapping).map(([name, id]) => (
-                  <div key={id}>• {name} → ID: {id}</div>
+                {Object.entries(subjectMapping).map(([name, id], index) => (
+                  <div key={`${id}-${index}`}>• {name} → ID: {id}</div>
                 ))}
               </div>
             </div>
@@ -390,12 +544,16 @@ export default function AdminBulkImport() {
                     className={`p-3 rounded-lg border-l-4 ${
                       result.success
                         ? 'bg-green-50 border-green-500'
+                        : result.isDuplicate
+                        ? 'bg-yellow-50 border-yellow-500'
                         : 'bg-red-50 border-red-500'
                     }`}
                   >
                     <div className="flex items-start gap-2">
                       {result.success ? (
                         <CheckCircle size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
+                      ) : result.isDuplicate ? (
+                        <span className="text-yellow-500 flex-shrink-0 mt-0.5 text-lg">⚠️</span>
                       ) : (
                         <XCircle size={20} className="text-red-500 flex-shrink-0 mt-0.5" />
                       )}
@@ -405,11 +563,15 @@ export default function AdminBulkImport() {
                         </p>
                         {result.success ? (
                           <p className="text-xs text-green-600 mt-1">
-                            ✓ Saved with ID: {result.id}
+                            ✓ Saved with ID: {result.id} | Subject: {result.subject_id}
+                          </p>
+                        ) : result.isDuplicate ? (
+                          <p className="text-xs text-yellow-600 mt-1">
+                            ⚠️ Duplicate skipped | Subject: {result.subject_id}
                           </p>
                         ) : (
                           <p className="text-xs text-red-600 mt-1">
-                            ✗ Error: {result.error}
+                            ✗ Error: {result.error} | Attempted Subject: {result.subject_id}
                           </p>
                         )}
                       </div>
@@ -425,8 +587,11 @@ export default function AdminBulkImport() {
                   <span className="text-green-600 font-semibold">
                     ✓ Success: {results.filter(r => r.success).length}
                   </span>
+                  <span className="text-yellow-600 font-semibold">
+                    ⚠️ Duplicates: {results.filter(r => r.isDuplicate).length}
+                  </span>
                   <span className="text-red-600 font-semibold">
-                    ✗ Failed: {results.filter(r => !r.success).length}
+                    ✗ Failed: {results.filter(r => !r.success && !r.isDuplicate).length}
                   </span>
                   <span className="text-gray-600 font-semibold">
                     Total: {results.length}

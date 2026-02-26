@@ -116,6 +116,19 @@ def create_question(question: QuestionCreate, db: Session = Depends(get_db)):
     if not subject:
         raise HTTPException(status_code=404, detail="Subject not found")
     
+    # Check for duplicate question (exact match)
+    existing_question = db.query(Question).filter(
+        Question.question == question.question,
+        Question.subject_id == question.subject_id,
+        Question.is_active == True
+    ).first()
+    
+    if existing_question:
+        raise HTTPException(
+            status_code=409, 
+            detail=f"Duplicate question found! Question already exists with ID: {existing_question.id}"
+        )
+    
     db_question = Question(**question.dict())
     db.add(db_question)
     db.commit()

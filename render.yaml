@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: mpsc-backend
+    env: python
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mpsc-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: "3.13.3"
+
+databases:
+  - name: mpsc-db
+    databaseName: mpsc_revision
+    user: mpsc_user

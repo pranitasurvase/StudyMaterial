@@ -6,7 +6,12 @@ import { mcqData, descriptiveData } from '../data/index'
 import historyMCQsBilingual from '../data/mcqs/history-bilingual'
 import modernIndiaMCQs from '../data/mcqs/modern-india'
 import ancientHistoryMCQs from '../data/mcqs/ancient-history'
+import geographyMCQs from '../data/mcqs/geography'
 import { useLanguage } from '../context/LanguageContext'
+
+console.log('PracticeHub loaded')
+console.log('Geography MCQs:', geographyMCQs?.length || 0)
+console.log('Modern India MCQs:', modernIndiaMCQs?.length || 0)
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1'
 
@@ -189,6 +194,8 @@ function MCQListComponent({ subject }) {
         localQuestions = modernIndiaMCQs
       } else if (subject === 'Ancient History') {
         localQuestions = ancientHistoryMCQs
+      } else if (subject === 'Geography') {
+        localQuestions = geographyMCQs
       } else {
         localQuestions = mcqData[subject] || []
       }
