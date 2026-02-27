@@ -7277,7 +7277,444 @@ export const economyBilingualMCQs = [
     difficulty: "Medium",
     topic: { en: "Indian Economy", mr: "भारतीय अर्थव्यवस्था" },
     marks: 2
+  },
+  {
+    id: 384,
+    question: {
+      en: "What is the primary objective of the Production Linked Incentive (PLI) Scheme?",
+      mr: "उत्पादन जोडलेली प्रोत्साहन (PLI) योजनेचे प्राथमिक उद्दिष्ट काय आहे?"
+    },
+    options: {
+      en: ["Export promotion", "Domestic manufacturing boost", "Agricultural development", "Service sector growth"],
+      mr: ["निर्यात प्रोत्साहन", "देशांतर्गत उत्पादन वाढ", "कृषी विकास", "सेवा क्षेत्र वाढ"]
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "The PLI Scheme launched in 2020 aims to boost domestic manufacturing by providing financial incentives to companies based on incremental sales and production. It covers 14 key sectors including electronics, pharmaceuticals, automobiles, textiles, and food processing with an outlay of ₹1.97 lakh crore. The scheme encourages companies to set up or expand manufacturing units in India, reduce import dependence, and create employment opportunities.",
+      mr: "2020 मध्ये सुरू करण्यात आलेली PLI योजना वाढीव विक्री आणि उत्पादनावर आधारित कंपन्यांना आर्थिक प्रोत्साहन देऊन देशांतर्गत उत्पादन वाढवण्याचे उद्दिष्ट ठेवते. यात इलेक्ट्रॉनिक्स, फार्मास्युटिकल्स, ऑटोमोबाईल्स, कापड आणि अन्न प्रक्रियासह 14 प्रमुख क्षेत्रे समाविष्ट आहेत ज्याचा खर्च ₹1.97 लाख कोटी आहे."
+    },
+    difficulty: "Medium",
+    topic: { en: "Government Schemes", mr: "सरकारी योजना" },
+    marks: 2
+  },
+  {
+    id: 385,
+    question: {
+      en: "What is 'Helicopter Money' in economics?",
+      mr: "अर्थशास्त्रात 'हेलिकॉप्टर मनी' काय आहे?"
+    },
+    options: {
+      en: ["Direct cash transfer to citizens", "Loans to banks", "Government bonds", "Foreign aid"],
+      mr: ["नागरिकांना थेट रोख हस्तांतरण", "बँकांना कर्ज", "सरकारी रोखे", "परदेशी मदत"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "Helicopter Money is an unconventional monetary policy tool where the central bank directly transfers money to citizens or the government without expecting repayment. The term was coined by economist Milton Friedman. It's used during severe economic downturns to stimulate demand and consumption. Unlike quantitative easing which works through banks, helicopter money directly reaches people, potentially causing inflation if not managed properly.",
+      mr: "हेलिकॉप्टर मनी हे एक अपारंपरिक चलन धोरण साधन आहे जेथे केंद्रीय बँक परतफेडीची अपेक्षा न ठेवता नागरिकांना किंवा सरकारला थेट पैसे हस्तांतरित करते. हा शब्द अर्थशास्त्रज्ञ मिल्टन फ्रीडमन यांनी तयार केला. मागणी आणि उपभोग उत्तेजित करण्यासाठी गंभीर आर्थिक मंदीच्या काळात याचा वापर केला जातो."
+    },
+    difficulty: "Hard",
+    topic: { en: "Monetary Policy", mr: "चलन धोरण" },
+    marks: 2
+  },
+  {
+    id: 386,
+    question: {
+      en: "Which organization publishes the Global Competitiveness Report?",
+      mr: "जागतिक स्पर्धात्मकता अहवाल कोणती संस्था प्रकाशित करते?"
+    },
+    options: {
+      en: ["World Bank", "IMF", "World Economic Forum", "OECD"],
+      mr: ["जागतिक बँक", "IMF", "जागतिक आर्थिक मंच", "OECD"]
+    },
+    correctAnswer: 2,
+    explanation: {
+      en: "The World Economic Forum (WEF) publishes the annual Global Competitiveness Report which assesses the competitiveness landscape of 141 economies. It evaluates factors like institutions, infrastructure, ICT adoption, macroeconomic stability, health, skills, product market, labor market, financial system, market size, business dynamism, and innovation capability. India's ranking has improved significantly in recent years due to reforms in ease of doing business and digital infrastructure.",
+      mr: "जागतिक आर्थिक मंच (WEF) वार्षिक जागतिक स्पर्धात्मकता अहवाल प्रकाशित करतो जो 141 अर्थव्यवस्थांच्या स्पर्धात्मकता परिदृश्याचे मूल्यांकन करतो. यात संस्था, पायाभूत सुविधा, ICT अवलंब, समष्टि आर्थिक स्थिरता, आरोग्य, कौशल्ये, उत्पादन बाजार, श्रम बाजार, वित्तीय प्रणाली, बाजार आकार, व्यवसाय गतिशीलता आणि नवकल्पना क्षमता यासारख्या घटकांचे मूल्यांकन केले जाते."
+    },
+    difficulty: "Easy",
+    topic: { en: "International Organizations", mr: "आंतरराष्ट्रीय संस्था" },
+    marks: 2
+  },
+  {
+    id: 387,
+    question: {
+      en: "What is the 'Laffer Curve' in economics?",
+      mr: "अर्थशास्त्रात 'लॅफर वक्र' काय आहे?"
+    },
+    options: {
+      en: ["Relationship between tax rates and revenue", "Supply and demand curve", "Inflation and unemployment", "GDP and population"],
+      mr: ["कर दर आणि महसूल यांच्यातील संबंध", "पुरवठा आणि मागणी वक्र", "चलनवाढ आणि बेरोजगारी", "GDP आणि लोकसंख्या"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "The Laffer Curve illustrates the relationship between tax rates and tax revenue collected by governments. It suggests that there's an optimal tax rate that maximizes revenue. If tax rates are too low, revenue is low; if too high, it discourages economic activity and also reduces revenue. Named after economist Arthur Laffer, it shows that both 0% and 100% tax rates generate zero revenue. The curve is used to argue for tax cuts when rates are believed to be on the prohibitive side.",
+      mr: "लॅफर वक्र कर दर आणि सरकारांनी गोळा केलेल्या कर महसूल यांच्यातील संबंध दर्शवितो. हे सूचित करते की एक इष्टतम कर दर आहे जो महसूल जास्तीत जास्त करतो. जर कर दर खूप कमी असतील तर महसूल कमी आहे; जर खूप जास्त असेल तर ते आर्थिक क्रियाकलाप परावृत्त करते आणि महसूल देखील कमी करते."
+    },
+    difficulty: "Hard",
+    topic: { en: "Economic Theories", mr: "आर्थिक सिद्धांत" },
+    marks: 2
+  },
+  {
+    id: 388,
+    question: {
+      en: "What is the primary function of the Small Industries Development Bank of India (SIDBI)?",
+      mr: "भारतीय लघु उद्योग विकास बँक (SIDBI) चे प्राथमिक कार्य काय आहे?"
+    },
+    options: {
+      en: ["Agricultural finance", "MSME financing", "Export credit", "Infrastructure loans"],
+      mr: ["कृषी वित्त", "MSME वित्तपुरवठा", "निर्यात कर्ज", "पायाभूत सुविधा कर्ज"]
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "SIDBI, established in 1990, is the principal financial institution for promotion, financing, and development of Micro, Small and Medium Enterprises (MSMEs) in India. It provides direct and indirect financial assistance, promotes employment generation, and supports entrepreneurship development. SIDBI also acts as the nodal agency for implementing government schemes for MSMEs and coordinates with other institutions to strengthen the MSME ecosystem.",
+      mr: "SIDBI, 1990 मध्ये स्थापन झाली, भारतातील सूक्ष्म, लघु आणि मध्यम उद्योग (MSME) च्या प्रोत्साहन, वित्तपुरवठा आणि विकासासाठी प्रमुख वित्तीय संस्था आहे. ती प्रत्यक्ष आणि अप्रत्यक्ष आर्थिक सहाय्य प्रदान करते, रोजगार निर्मितीला प्रोत्साहन देते आणि उद्योजकता विकासास समर्थन देते."
+    },
+    difficulty: "Easy",
+    topic: { en: "Financial Institutions", mr: "वित्तीय संस्था" },
+    marks: 2
+  },
+  {
+    id: 389,
+    question: {
+      en: "What is 'Twin Deficit' in macroeconomics?",
+      mr: "समष्टि अर्थशास्त्रात 'जुळी तूट' काय आहे?"
+    },
+    options: {
+      en: ["Fiscal and current account deficits", "Revenue and capital deficits", "Trade and budget deficits", "Primary and revenue deficits"],
+      mr: ["राजकोषीय आणि चालू खाते तूट", "महसूल आणि भांडवली तूट", "व्यापार आणि अर्थसंकल्प तूट", "प्राथमिक आणि महसूल तूट"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "Twin Deficit refers to the simultaneous occurrence of fiscal deficit (government spending exceeds revenue) and current account deficit (imports exceed exports). These deficits are often linked as high government borrowing can lead to increased imports and reduced exports. The twin deficit hypothesis suggests that fiscal deficits cause current account deficits. Countries like India have experienced twin deficits, requiring careful macroeconomic management to maintain stability.",
+      mr: "जुळी तूट म्हणजे राजकोषीय तूट (सरकारी खर्च महसूलापेक्षा जास्त) आणि चालू खाते तूट (आयात निर्यातीपेक्षा जास्त) यांचे एकाचवेळी घडणे. या तूट अनेकदा जोडल्या जातात कारण उच्च सरकारी कर्ज घेतल्याने आयात वाढू शकते आणि निर्यात कमी होऊ शकते."
+    },
+    difficulty: "Medium",
+    topic: { en: "Macroeconomics", mr: "समष्टि अर्थशास्त्र" },
+    marks: 2
+  },
+  {
+    id: 390,
+    question: {
+      en: "Which committee recommended the establishment of Payment Banks in India?",
+      mr: "भारतात पेमेंट बँकांच्या स्थापनेची शिफारस कोणत्या समितीने केली?"
+    },
+    options: {
+      en: ["Nachiket Mor Committee", "Narasimham Committee", "Rangarajan Committee", "Urjit Patel Committee"],
+      mr: ["नचिकेत मोर समिती", "नरसिंहम समिती", "रंगराजन समिती", "उर्जित पटेल समिती"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "The Nachiket Mor Committee on Comprehensive Financial Services for Small Businesses and Low Income Households (2013) recommended the creation of Payment Banks to increase financial inclusion. Payment Banks can accept deposits up to ₹2 lakh, provide remittance services, and offer internet banking, but cannot issue loans or credit cards. They focus on serving unbanked and underbanked populations, especially in rural areas.",
+      mr: "लघु व्यवसाय आणि कमी उत्पन्न असलेल्या कुटुंबांसाठी सर्वसमावेशक वित्तीय सेवांवरील नचिकेत मोर समिती (2013) ने वित्तीय समावेश वाढवण्यासाठी पेमेंट बँकांच्या निर्मितीची शिफारस केली. पेमेंट बँका ₹2 लाखांपर्यंत ठेवी स्वीकारू शकतात, प्रेषण सेवा प्रदान करू शकतात आणि इंटरनेट बँकिंग ऑफर करू शकतात, परंतु कर्ज किंवा क्रेडिट कार्ड जारी करू शकत नाहीत."
+    },
+    difficulty: "Medium",
+    topic: { en: "Banking Reforms", mr: "बँकिंग सुधारणा" },
+    marks: 2
+  },
+  {
+    id: 391,
+    question: {
+      en: "What is 'Crowding Out Effect' in economics?",
+      mr: "अर्थशास्त्रात 'क्राउडिंग आउट इफेक्ट' काय आहे?"
+    },
+    options: {
+      en: ["Government spending reducing private investment", "Inflation reducing purchasing power", "Exports reducing imports", "Savings reducing consumption"],
+      mr: ["सरकारी खर्च खाजगी गुंतवणूक कमी करणे", "चलनवाढ क्रयशक्ती कमी करणे", "निर्यात आयात कमी करणे", "बचत उपभोग कमी करणे"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "Crowding Out Effect occurs when increased government spending leads to reduced private sector investment. When government borrows heavily to finance its spending, it increases demand for loanable funds, raising interest rates. Higher interest rates make borrowing expensive for private businesses, discouraging their investment. This effect is particularly significant during periods of high fiscal deficits. However, during recessions, crowding out may be minimal as private investment is already low.",
+      mr: "क्राउडिंग आउट इफेक्ट तेव्हा घडतो जेव्हा वाढलेल्या सरकारी खर्चामुळे खाजगी क्षेत्राची गुंतवणूक कमी होते. जेव्हा सरकार आपल्या खर्चाला वित्तपुरवठा करण्यासाठी मोठ्या प्रमाणात कर्ज घेते तेव्हा ते कर्ज देण्यायोग्य निधीची मागणी वाढवते, व्याज दर वाढवते. उच्च व्याज दर खाजगी व्यवसायांसाठी कर्ज घेणे महाग बनवतात, त्यांची गुंतवणूक परावृत्त करतात."
+    },
+    difficulty: "Hard",
+    topic: { en: "Fiscal Policy", mr: "राजकोषीय धोरण" },
+    marks: 2
+  },
+  {
+    id: 392,
+    question: {
+      en: "What is the primary objective of the National Investment and Infrastructure Fund (NIIF)?",
+      mr: "राष्ट्रीय गुंतवणूक आणि पायाभूत सुविधा निधी (NIIF) चे प्राथमिक उद्दिष्ट काय आहे?"
+    },
+    options: {
+      en: ["Agricultural development", "Infrastructure financing", "Export promotion", "Banking sector support"],
+      mr: ["कृषी विकास", "पायाभूत सुविधा वित्तपुरवठा", "निर्यात प्रोत्साहन", "बँकिंग क्षेत्र समर्थन"]
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "NIIF, established in 2015, is India's first sovereign wealth fund designed to attract domestic and international capital for infrastructure development. With an initial corpus of ₹40,000 crore, it operates through multiple funds focusing on sectors like energy, transportation, housing, and digital infrastructure. NIIF acts as a catalyst to maximize economic impact through infrastructure development, creating a multiplier effect on growth and employment.",
+      mr: "NIIF, 2015 मध्ये स्थापन झाला, पायाभूत सुविधा विकासासाठी देशांतर्गत आणि आंतरराष्ट्रीय भांडवल आकर्षित करण्यासाठी डिझाइन केलेला भारताचा पहिला सार्वभौम संपत्ती निधी आहे. ₹40,000 कोटींच्या प्रारंभिक कॉर्पससह, ते ऊर्जा, वाहतूक, गृहनिर्माण आणि डिजिटल पायाभूत सुविधा यासारख्या क्षेत्रांवर लक्ष केंद्रित करणाऱ्या अनेक निधींद्वारे कार्य करते."
+    },
+    difficulty: "Medium",
+    topic: { en: "Infrastructure Finance", mr: "पायाभूत सुविधा वित्त" },
+    marks: 2
+  },
+  {
+    id: 393,
+    question: {
+      en: "What is 'Phillips Curve' in macroeconomics?",
+      mr: "समष्टि अर्थशास्त्रात 'फिलिप्स वक्र' काय आहे?"
+    },
+    options: {
+      en: ["Relationship between inflation and unemployment", "GDP and population growth", "Interest rates and investment", "Exports and imports"],
+      mr: ["चलनवाढ आणि बेरोजगारी यांच्यातील संबंध", "GDP आणि लोकसंख्या वाढ", "व्याज दर आणि गुंतवणूक", "निर्यात आणि आयात"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "The Phillips Curve shows an inverse relationship between inflation and unemployment - when unemployment is low, inflation tends to be high and vice versa. Named after economist A.W. Phillips, it suggests policymakers face a trade-off between inflation and unemployment. However, the relationship broke down in the 1970s during stagflation. The modern view incorporates expectations, showing that the trade-off exists only in the short run, while in the long run, there's no trade-off.",
+      mr: "फिलिप्स वक्र चलनवाढ आणि बेरोजगारी यांच्यातील व्यस्त संबंध दर्शवितो - जेव्हा बेरोजगारी कमी असते तेव्हा चलनवाढ जास्त असते आणि उलट. अर्थशास्त्रज्ञ A.W. फिलिप्स यांच्या नावावरून, हे सूचित करते की धोरणकर्त्यांना चलनवाढ आणि बेरोजगारी यांच्यात व्यापार-बंद सामोरे जावे लागते."
+    },
+    difficulty: "Hard",
+    topic: { en: "Macroeconomic Theories", mr: "समष्टि आर्थिक सिद्धांत" },
+    marks: 2
+  },
+  {
+    id: 394,
+    question: {
+      en: "Which organization regulates commodity derivatives markets in India?",
+      mr: "भारतातील कमोडिटी डेरिव्हेटिव्ह बाजारांचे नियमन कोणती संस्था करते?"
+    },
+    options: {
+      en: ["RBI", "SEBI", "FMC", "NABARD"],
+      mr: ["RBI", "SEBI", "FMC", "NABARD"]
+    },
+    correctAnswer: 1,
+    explanation: {
+      en: "SEBI (Securities and Exchange Board of India) regulates commodity derivatives markets in India since 2015, when the Forward Markets Commission (FMC) was merged with SEBI. This unified regulation brings commodity and securities markets under one regulator, ensuring better oversight and investor protection. SEBI regulates commodity exchanges like MCX and NCDEX, which facilitate trading in agricultural commodities, metals, and energy products.",
+      mr: "SEBI (भारतीय रोखे आणि विनिमय मंडळ) 2015 पासून भारतातील कमोडिटी डेरिव्हेटिव्ह बाजारांचे नियमन करते, जेव्हा फॉरवर्ड मार्केट्स कमिशन (FMC) SEBI मध्ये विलीन करण्यात आले. हे एकत्रित नियमन कमोडिटी आणि रोखे बाजार एका नियामकाच्या अंतर्गत आणते, चांगले निरीक्षण आणि गुंतवणूकदार संरक्षण सुनिश्चित करते."
+    },
+    difficulty: "Medium",
+    topic: { en: "Financial Regulation", mr: "वित्तीय नियमन" },
+    marks: 2  },
+  {
+    id: 395,
+    question: {
+      en: "What is 'Base Erosion and Profit Shifting' (BEPS)?",
+      mr: "'बेस इरोजन आणि प्रॉफिट शिफ्टिंग' (BEPS) काय आहे?"
+    },
+    options: {
+      en: ["Tax avoidance strategy", "Trade deficit", "Currency devaluation", "Budget deficit"],
+      mr: ["कर टाळण्याची रणनीती", "व्यापार तूट", "चलन अवमूल्यन", "अर्थसंकल्प तूट"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "BEPS refers to tax planning strategies used by multinational corporations to exploit gaps and mismatches in tax rules to artificially shift profits to low or no-tax locations. The OECD launched the BEPS project in 2013 to address this issue through 15 action plans. India has implemented several BEPS measures including Country-by-Country reporting, General Anti-Avoidance Rules (GAAR), and Equalization Levy to prevent tax base erosion.",
+      mr: "BEPS म्हणजे बहुराष्ट्रीय कॉर्पोरेशन्सद्वारे कर नियमांमधील अंतर आणि विसंगती यांचा फायदा घेऊन कृत्रिमरित्या नफा कमी किंवा शून्य कर असलेल्या ठिकाणी हलवण्यासाठी वापरल्या जाणाऱ्या कर नियोजन धोरणांचा संदर्भ आहे."
+    },
+    difficulty: "Hard",
+    topic: { en: "International Taxation", mr: "आंतरराष्ट्रीय कर आकारणी" },
+    marks: 2
+  },
+  {
+    id: 396,
+    question: {
+      en: "What is the primary objective of the Sovereign Gold Bond Scheme?",
+      mr: "सार्वभौम सोने बाँड योजनेचे प्राथमिक उद्दिष्ट काय आहे?"
+    },
+    options: {
+      en: ["Reduce physical gold demand", "Increase gold imports", "Promote jewelry exports", "Support gold mining"],
+      mr: ["भौतिक सोन्याची मागणी कमी करणे", "सोन्याची आयात वाढवणे", "दागिने निर्यात प्रोत्साहन", "सोन्याच्या खाणकामास समर्थन"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "Sovereign Gold Bonds (SGBs) launched in 2015 aim to reduce the demand for physical gold and shift a part of domestic gold demand to financial savings. Investors get interest of 2.5% per annum along with capital appreciation linked to gold prices. SGBs are issued by RBI on behalf of Government of India with tenure of 8 years. They help reduce gold imports, thereby improving current account deficit.",
+      mr: "2015 मध्ये सुरू करण्यात आलेल्या सार्वभौम सोने बाँड (SGB) चे उद्दिष्ट भौतिक सोन्याची मागणी कमी करणे आणि देशांतर्गत सोन्याच्या मागणीचा एक भाग वित्तीय बचतीकडे वळवणे आहे."
+    },
+    difficulty: "Medium",
+    topic: { en: "Government Schemes", mr: "सरकारी योजना" },
+    marks: 2
+  },
+  {
+    id: 397,
+    question: {
+      en: "What is 'Ease of Doing Business' index?",
+      mr: "व्यवसाय करण्याची सुलभता निर्देशांक काय आहे?"
+    },
+    options: {
+      en: ["World Bank ranking", "IMF report", "WEF index", "UN ranking"],
+      mr: ["जागतिक बँक क्रमवारी", "IMF अहवाल", "WEF निर्देशांक", "UN क्रमवारी"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "The Ease of Doing Business index published by World Bank annually ranks countries based on regulations affecting businesses. It measures 10 indicators including starting a business, dealing with construction permits, getting electricity, registering property, getting credit, protecting minority investors, paying taxes, trading across borders, enforcing contracts, and resolving insolvency. India improved from 142nd rank in 2014 to 63rd in 2020 through major reforms in taxation, insolvency laws, and digital infrastructure.",
+      mr: "व्यवसाय करण्याची सुलभता निर्देशांक जागतिक बँकेद्वारे दरवर्षी प्रकाशित केला जातो जो व्यवसायांवर परिणाम करणाऱ्या नियमांवर आधारित देशांची क्रमवारी लावतो. यात व्यवसाय सुरू करणे, बांधकाम परवाने, वीज मिळवणे, मालमत्ता नोंदणी, कर्ज मिळवणे, अल्पसंख्याक गुंतवणूकदारांचे संरक्षण, कर भरणे, सीमापार व्यापार, करार अंमलबजावणी आणि दिवाळखोरी सोडवणे यासह 10 निर्देशक मोजले जातात."
+    },
+    difficulty: "Medium",
+    topic: { en: "Business Environment", mr: "व्यवसाय वातावरण" },
+    marks: 2
+  },
+  {
+    id: 398,
+    question: {
+      en: "What is 'Disinvestment' in public sector?",
+      mr: "सार्वजनिक क्षेत्रात 'विनिवेश' काय आहे?"
+    },
+    options: {
+      en: ["Selling government stake", "Buying private companies", "Nationalizing industries", "Closing PSUs"],
+      mr: ["सरकारी हिस्सा विकणे", "खाजगी कंपन्या खरेदी करणे", "उद्योगांचे राष्ट्रीयीकरण", "PSU बंद करणे"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "Disinvestment refers to selling or liquidating government stake in public sector enterprises (PSEs). It can be strategic disinvestment (selling controlling stake with management control) or minority disinvestment (selling partial stake without losing control). Objectives include reducing fiscal burden, improving efficiency through competition, promoting wider share ownership, and funding development programs. DIPAM (Department of Investment and Public Asset Management) manages the disinvestment process. Major recent disinvestments include Air India, BPCL stake sale, and LIC IPO.",
+      mr: "विनिवेश म्हणजे सार्वजनिक क्षेत्रातील उपक्रमांमध्ये (PSE) सरकारी हिस्सा विकणे किंवा रद्द करणे. हे धोरणात्मक विनिवेश (व्यवस्थापन नियंत्रणासह नियंत्रण हिस्सा विकणे) किंवा अल्पसंख्याक विनिवेश (नियंत्रण न गमावता आंशिक हिस्सा विकणे) असू शकते."
+    },
+    difficulty: "Easy",
+    topic: { en: "Public Finance", mr: "सार्वजनिक वित्त" },
+    marks: 2
+  },
+  {
+    id: 399,
+    question: {
+      en: "What is 'Minimum Support Price' (MSP)?",
+      mr: "'किमान आधार किंमत' (MSP) काय आहे?"
+    },
+    options: {
+      en: ["Guaranteed price for farmers", "Maximum retail price", "Export price", "Import duty"],
+      mr: ["शेतकऱ्यांसाठी हमी किंमत", "कमाल किरकोळ किंमत", "निर्यात किंमत", "आयात शुल्क"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "MSP is the minimum price at which government purchases crops from farmers, protecting them from price crashes. Commission for Agricultural Costs and Prices (CACP) recommends MSP for 23 crops based on production costs, demand-supply, market prices, and inter-crop price parity. MSP ensures remunerative prices, encourages crop diversification, and maintains food security. However, procurement is mainly limited to wheat and rice, with limited reach for other crops. The Swaminathan Commission recommended MSP at 150% of production cost.",
+      mr: "MSP ही किमान किंमत आहे ज्यावर सरकार शेतकऱ्यांकडून पिके खरेदी करते, त्यांना किंमत घसरणीपासून संरक्षण देते. कृषी खर्च आणि किंमत आयोग (CACP) उत्पादन खर्च, मागणी-पुरवठा, बाजार किंमती आणि आंतर-पीक किंमत समानता यावर आधारित 23 पिकांसाठी MSP ची शिफारस करतो."
+    },
+    difficulty: "Easy",
+    topic: { en: "Agricultural Economics", mr: "कृषी अर्थशास्त्र" },
+    marks: 2
+  },
+  {
+    id: 400,
+    question: {
+      en: "What is 'Universal Basic Income' (UBI)?",
+      mr: "'सार्वत्रिक मूलभूत उत्पन्न' (UBI) काय आहे?"
+    },
+    options: {
+      en: ["Unconditional cash transfer to all", "Minimum wage law", "Pension scheme", "Employment guarantee"],
+      mr: ["सर्वांना बिनशर्त रोख हस्तांतरण", "किमान वेतन कायदा", "पेन्शन योजना", "रोजगार हमी"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "UBI is a social security system where all citizens receive regular unconditional cash payments from the government regardless of employment status or income level. The Economic Survey 2016-17 discussed UBI as an alternative to existing welfare schemes. Advantages include reducing poverty, eliminating middlemen, providing freedom of choice, and reducing administrative costs. Challenges include fiscal burden, potential reduction in work incentive, and inflation. Pilot projects in Madhya Pradesh showed positive results in nutrition, health, and education.",
+      mr: "UBI ही एक सामाजिक सुरक्षा प्रणाली आहे जिथे सर्व नागरिकांना रोजगार स्थिती किंवा उत्पन्न पातळी विचारात न घेता सरकारकडून नियमित बिनशर्त रोख देयके मिळतात. आर्थिक सर्वेक्षण 2016-17 मध्ये विद्यमान कल्याण योजनांना पर्याय म्हणून UBI ची चर्चा करण्यात आली."
+    },
+    difficulty: "Hard",
+    topic: { en: "Social Welfare", mr: "सामाजिक कल्याण" },
+    marks: 2
+  },
+  {
+    id: 401,
+    question: {
+      en: "What is 'Non-Performing Asset' (NPA)?",
+      mr: "'नॉन-परफॉर्मिंग अॅसेट' (NPA) काय आहे?"
+    },
+    options: {
+      en: ["Loan with overdue payment", "Profitable investment", "Government bond", "Fixed deposit"],
+      mr: ["थकित देयक असलेले कर्ज", "फायदेशीर गुंतवणूक", "सरकारी रोखा", "मुदत ठेव"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "NPA is a loan or advance where interest or principal payment remains overdue for 90 days or more. NPAs are classified as Sub-standard (overdue for 12 months), Doubtful (overdue for more than 12 months), and Loss assets (uncollectible). High NPAs reduce bank profitability, limit lending capacity, and affect economic growth. The Insolvency and Bankruptcy Code 2016, SARFAESI Act, and Asset Reconstruction Companies help in NPA resolution. RBI's Prompt Corrective Action framework monitors banks with high NPAs.",
+      mr: "NPA हे कर्ज किंवा अॅडव्हान्स आहे जेथे व्याज किंवा मूळ देयक 90 दिवस किंवा अधिक काळ थकित राहते. NPA चे वर्गीकरण उप-मानक (12 महिने थकित), संशयास्पद (12 महिन्यांपेक्षा जास्त थकित), आणि तोटा मालमत्ता (वसूल न करता येणारी) असे केले जाते."
+    },
+    difficulty: "Medium",
+    topic: { en: "Banking", mr: "बँकिंग" },
+    marks: 2
+  },
+  {
+    id: 402,
+    question: {
+      en: "What is 'Special Economic Zone' (SEZ)?",
+      mr: "'विशेष आर्थिक क्षेत्र' (SEZ) काय आहे?"
+    },
+    options: {
+      en: ["Export-oriented zone with tax benefits", "Agricultural zone", "Residential area", "Industrial slum"],
+      mr: ["कर लाभांसह निर्यात-केंद्रित क्षेत्र", "कृषी क्षेत्र", "निवासी क्षेत्र", "औद्योगिक झोपडपट्टी"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "SEZ is a geographically demarcated area with special economic laws different from the rest of the country to attract foreign investment and promote exports. The SEZ Act 2005 provides tax exemptions, duty-free imports, simplified procedures, and world-class infrastructure. Benefits include employment generation, foreign exchange earnings, and technology transfer. India has over 250 operational SEZs in sectors like IT, pharmaceuticals, textiles, and engineering. However, concerns include land acquisition issues, revenue loss, and limited backward linkages.",
+      mr: "SEZ हे भौगोलिकदृष्ट्या चिन्हांकित क्षेत्र आहे ज्यात परदेशी गुंतवणूक आकर्षित करण्यासाठी आणि निर्यातीला प्रोत्साहन देण्यासाठी देशाच्या इतर भागांपेक्षा वेगळे विशेष आर्थिक कायदे आहेत. SEZ कायदा 2005 कर सवलती, शुल्कमुक्त आयात, सुलभ प्रक्रिया आणि जागतिक दर्जाची पायाभूत सुविधा प्रदान करतो."
+    },
+    difficulty: "Medium",
+    topic: { en: "Trade Policy", mr: "व्यापार धोरण" },
+    marks: 2
+  },
+  {
+    id: 403,
+    question: {
+      en: "What is 'Monetary Policy Committee' (MPC)?",
+      mr: "'चलन धोरण समिती' (MPC) काय आहे?"
+    },
+    options: {
+      en: ["RBI committee for interest rates", "Finance Ministry panel", "Banking regulator", "Tax advisory body"],
+      mr: ["व्याज दरांसाठी RBI समिती", "वित्त मंत्रालय पॅनेल", "बँकिंग नियामक", "कर सल्लागार संस्था"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "MPC is a six-member committee constituted under the RBI Act 1934 (amended in 2016) to determine the policy interest rate (repo rate) to achieve the inflation target. It has three RBI members (Governor as chairperson, Deputy Governor, and one officer) and three external members appointed by the Government. MPC meets at least four times a year and decisions are taken by majority vote. The inflation target is 4% with a tolerance band of +/- 2%. This framework ensures transparency and accountability in monetary policy.",
+      mr: "MPC ही RBI कायदा 1934 (2016 मध्ये सुधारित) अंतर्गत स्थापन केलेली सहा सदस्यीय समिती आहे जी चलनवाढ लक्ष्य साध्य करण्यासाठी धोरण व्याज दर (रेपो दर) निश्चित करते. यात तीन RBI सदस्य (अध्यक्ष म्हणून गव्हर्नर, उप गव्हर्नर आणि एक अधिकारी) आणि सरकारद्वारे नियुक्त केलेले तीन बाह्य सदस्य आहेत."
+    },
+    difficulty: "Medium",
+    topic: { en: "Monetary Policy", mr: "चलन धोरण" },
+    marks: 2
+  },
+  {
+    id: 404,
+    question: {
+      en: "What is 'Green GDP'?",
+      mr: "'ग्रीन GDP' काय आहे?"
+    },
+    options: {
+      en: ["GDP adjusted for environmental costs", "Agricultural GDP", "Forest cover GDP", "Renewable energy GDP"],
+      mr: ["पर्यावरणीय खर्चासाठी समायोजित GDP", "कृषी GDP", "वन आच्छादन GDP", "नवीकरणीय ऊर्जा GDP"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "Green GDP is an index of economic growth adjusted for environmental costs like pollution, resource depletion, and ecological damage. It provides a more accurate measure of sustainable development by accounting for natural capital depreciation. Traditional GDP doesn't reflect environmental degradation costs. Green GDP = Conventional GDP - Environmental degradation costs - Natural resource depletion. Countries like China have experimented with Green GDP accounting. India's National Green Tribunal and environmental regulations aim to balance growth with sustainability.",
+      mr: "ग्रीन GDP हा प्रदूषण, संसाधन ऱ्हास आणि पर्यावरणीय नुकसान यासारख्या पर्यावरणीय खर्चासाठी समायोजित आर्थिक वाढीचा निर्देशांक आहे. हे नैसर्गिक भांडवल घसारा विचारात घेऊन शाश्वत विकासाचे अधिक अचूक माप प्रदान करते."
+    },
+    difficulty: "Hard",
+    topic: { en: "Environmental Economics", mr: "पर्यावरणीय अर्थशास्त्र" },
+    marks: 2
+  },
+  {
+    id: 405,
+    question: {
+      en: "What is 'Priority Sector Lending' (PSL)?",
+      mr: "'प्राधान्य क्षेत्र कर्ज' (PSL) काय आहे?"
+    },
+    options: {
+      en: ["Mandatory lending to specified sectors", "Loans to large industries", "Foreign currency loans", "Personal loans"],
+      mr: ["निर्दिष्ट क्षेत्रांना अनिवार्य कर्ज", "मोठ्या उद्योगांना कर्ज", "परकीय चलन कर्ज", "वैयक्तिक कर्ज"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "PSL mandates banks to lend a specified portion of their advances to priority sectors like agriculture (18%), MSMEs (7.5%), export credit, education, housing, social infrastructure, and renewable energy. Domestic banks must lend 40% and foreign banks 32% of Adjusted Net Bank Credit (ANBC) to priority sectors. PSL ensures credit flow to vulnerable sections, promotes inclusive growth, and supports employment generation. Non-compliance attracts penalties and mandatory contribution to Rural Infrastructure Development Fund (RIDF).",
+      mr: "PSL बँकांना त्यांच्या अॅडव्हान्सचा निर्दिष्ट भाग कृषी (18%), MSME (7.5%), निर्यात कर्ज, शिक्षण, गृहनिर्माण, सामाजिक पायाभूत सुविधा आणि नवीकरणीय ऊर्जा यासारख्या प्राधान्य क्षेत्रांना कर्ज देणे अनिवार्य करते."
+    },
+    difficulty: "Medium",
+    topic: { en: "Banking", mr: "बँकिंग" },
+    marks: 2
+  },
+  {
+    id: 406,
+    question: {
+      en: "What is 'Inflation Targeting'?",
+      mr: "'चलनवाढ लक्ष्यीकरण' काय आहे?"
+    },
+    options: {
+      en: ["Monetary policy framework", "Fiscal policy tool", "Trade policy", "Tax policy"],
+      mr: ["चलन धोरण चौकट", "राजकोषीय धोरण साधन", "व्यापार धोरण", "कर धोरण"]
+    },
+    correctAnswer: 0,
+    explanation: {
+      en: "Inflation Targeting is a monetary policy framework where the central bank sets an explicit inflation target and uses policy tools to achieve it. India adopted flexible inflation targeting in 2016 with a target of 4% CPI inflation with a tolerance band of +/- 2%. The Monetary Policy Committee (MPC) adjusts repo rate to control inflation. Benefits include price stability, anchoring inflation expectations, and policy transparency. However, it may conflict with growth objectives during economic slowdowns. Over 30 countries including UK, Canada, and Australia follow inflation targeting.",
+      mr: "चलनवाढ लक्ष्यीकरण ही चलन धोरण चौकट आहे जिथे केंद्रीय बँक स्पष्ट चलनवाढ लक्ष्य सेट करते आणि ते साध्य करण्यासाठी धोरण साधने वापरते. भारताने 2016 मध्ये +/- 2% च्या सहनशीलता बँडसह 4% CPI चलनवाढ लक्ष्यासह लवचिक चलनवाढ लक्ष्यीकरण स्वीकारले."
+    },
+    difficulty: "Hard",
+    topic: { en: "Monetary Policy", mr: "चलन धोरण" },
+    marks: 2
   }
+
 ]
 
 export default economyBilingualMCQs
